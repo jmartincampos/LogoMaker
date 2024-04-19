@@ -18,10 +18,10 @@ Jest
 #1 Clone repo
 https://github.com/jmartincampos/LogoMaker.git
 
-#2 Navigate to project directory
+#2 Navigate to project directory:
 cd logo-maker
 
-#3 instlal dependencies
+#3 install dependencies:
 npm install
 
 # Usage
