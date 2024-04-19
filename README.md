@@ -33,7 +33,8 @@ node index.js
 3. Once all inputs are provided, an SVG file named logo.svg will be generated in the project directory.
 
 # Video Walkthrough
-![Uploading 2024-04-19 15.13.59.gif…]()
+/Users/jonathancampos/Desktop/LogoMaker/2024-04-19 15.46.24.gif
+
 
 
 # Contributing
