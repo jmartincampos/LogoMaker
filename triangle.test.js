@@ -1,19 +1,15 @@
-// lib/triangle.test.js
-const Triangle = require('/Users/jonathancampos/Desktop/LogoMaker/lib/triangle.js');
+// test.triangle.js
 
-test('Triangle class constructor sets points correctly', () => {
-  const triangle = new Triangle("150,18 244,182 56,182");
-  expect(triangle.points).toEqual("150,18 244,182 56,182");
-});
+const Triangle = require('./lib/triangle');
 
-test('setColor method sets color correctly', () => {
-  const triangle = new Triangle("150,18 244,182 56,182");
-  triangle.setColor('blue');
-  expect(triangle.color).toEqual('blue');
-});
+test('Triangle renders correctly with specified attributes', () => {
+  // Arrange
+  const triangle = new Triangle("160,10 230,90 90,90"); // Sample vertices coordinates
+  triangle.setColor('green'); // Set color to green
 
-test('render method returns SVG string with correct points and color', () => {
-  const triangle = new Triangle("150,18 244,182 56,182");
-  triangle.setColor('green');
-  expect(triangle.render()).toEqual('<polygon points="150,18 244,182 56,182" fill="green" />');
+  // Act
+  const renderedSVG = triangle.render();
+
+  // Assert
+  expect(renderedSVG).toEqual('<polygon points="160,10 230,90 90,90" fill="green" />');
 });

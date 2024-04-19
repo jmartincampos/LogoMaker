@@ -1,19 +1,17 @@
-// lib/circle.test.js
-const Circle= require('/Users/jonathancampos/Desktop/LogoMaker/lib/circle.js');
+// test.circle.js
 
-test('Circle class constructor sets points correctly', () => {
-  const circle = new Circle("150,18 244,182 56,182");
-  expect(circle.points).toEqual("150,18 244,182 56,182");
-});
+const Circle = require('./lib/circle');
+  // Create a new Circle instance with sample parameters
+test('Circle renders correctly with specified attributes', () => {
+  // Sample center coordinates (50, 50) and radius 40
+  const circle = new Circle(50, 50, 40); 
+  // sets color
+  circle.setColor('blue'); 
 
-test('setColor method sets color correctly', () => {
-  const circle = new Circle("150,18 244,182 56,182");
-  circle.setColor('blue');
-  expect(triangle.color).toEqual('blue');
-});
 
-test('render method returns SVG string with correct points and color', () => {
-  const circle= new Circle("150,18 244,182 56,182");
-  circle.setColor('green');
-  expect(circle.render()).toEqual('<polygon points="150,18 244,182 56,182" fill="green" />');
+  // Define the expected SVG string for the circle
+  const expectedSVG = '<circle cx="50" cy="50" r="40" fill="blue" />';
+
+  // Expect the rendered SVG string to match the expected SVG string
+  expect(circle.render()).toEqual(expectedSVG);
 });
