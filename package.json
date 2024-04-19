@@ -1,0 +1,27 @@
+{
+  "name": "logomaker",
+  "version": "1.0.0",
+  "description": "logomaker",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "LogoMaker"
+  },
+  "keywords": [
+    "logo"
+  ],
+  "author": "Jonathan M. Campos",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "inquirer": "^9.2.19"
+  }
+}
