@@ -1,19 +1,15 @@
-// lib/square.test.js
-const Square = require('/Users/jonathancampos/Desktop/LogoMaker/lib/square.js');
+// test.square.js
 
-test('Triangle class constructor sets points correctly', () => {
-  const square = new Square("150,18 244,182 56,182");
-  expect(square.points).toEqual("150,18 244,182 56,182");
-});
+const Square = require('./lib/square');
 
-test('setColor method sets color correctly', () => {
-  const square = new Square("150,18 244,182 56,182");
-  square.setColor('blue');
-  expect(square.color).toEqual('blue');
-});
+test('Square renders correctly with specified attributes', () => {
+  // Arrange
+  const square = new Square(90, 10, 80); // Sample top-left corner coordinates (90, 10) and side length 80
+  square.setColor('red'); // Set color to red
 
-test('render method returns SVG string with correct points and color', () => {
-  const square = new Square("150,18 244,182 56,182");
-  square.setColor('green');
-  expect(square.render()).toEqual('<polygon points="150,18 244,182 56,182" fill="green" />');
+  // Act
+  const renderedSVG = square.render();
+
+  // Assert
+  expect(renderedSVG).toEqual('<polygon points="90,10 170,10 170,90 90,90" fill="red" />');
 });
